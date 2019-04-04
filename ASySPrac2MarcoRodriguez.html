@@ -1,0 +1,486 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Practica 2: Se&ntilde;ales Continuass</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-03"><meta name="DC.source" content="ASySPrac2MarcoRodriguez.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Practica 2: Se&ntilde;ales Continuass</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Punto 1</a></li><li><a href="#2">Punto 2</a></li><li><a href="#3">Punto 3</a></li><li><a href="#4">Punto 4</a></li><li><a href="#5">Punto 5</a></li><li><a href="#6">Punto 6</a></li><li><a href="#7">Punto 7</a></li></ul></div><h2 id="1">Punto 1</h2><p>Funcion que evalua  <img src="ASySPrac2MarcoRodriguez_eq16918417665791585701.png" alt="$F(w)=\frac{a}{a^{2}+w^{2}}$"></p><pre class="language-matlab">
+<span class="comment">%Esta es una funcion que evalua a F(w)=a/(a^2 + w^2)</span>
+
+<span class="keyword">function</span> F = fun1(a, w)
+
+F=a./(a^2 + w.^2);
+
+<span class="keyword">end</span>
+
+</pre><h2 id="2">Punto 2</h2><pre class="codeinput">w=-2:0.001:2;
+f=fun1(1, w);
+Grafica(w, f, <span class="string">'Grafica de F(w)'</span>, [-3 3], [-2 2], <span class="string">'w'</span>)
+
+<span class="comment">%</span>
+</pre><img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_01.png" alt=""> <h2 id="3">Punto 3</h2><p>La transformada de Fourier de <img src="ASySPrac2MarcoRodriguez_eq16179711886080607310.png" alt="$f(t)=e^{-2t}u(t)$"> es <img src="ASySPrac2MarcoRodriguez_eq07892803138009332306.png" alt="$F(w)=\frac{1}{2+wj}$"> La parte real es : <img src="ASySPrac2MarcoRodriguez_eq11639360257193120824.png" alt="$\frac{\sqrt{29}}{29}Cos(tg^{-1}(\frac{w}{2}))$"> La parte imaginaria es : <img src="ASySPrac2MarcoRodriguez_eq15482276688612542707.png" alt="$\frac{\sqrt{29}}{29}Sen(tg^{-1}(\frac{w}{2}))$"></p><pre class="codeinput">w=-10:0.001:10;
+Re_F=@(w) (sqrt(29)/29)*cos(atand(w/2));
+Im_F=@(w) (sqrt(29)/29)*sin(atand(w/2));
+Grafica3D(w, Re_F(w), Im_F(w), <span class="string">'Grafica de la transformada de Fourier'</span>)
+
+<span class="comment">%</span>
+</pre><img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_02.png" alt=""> <h2 id="4">Punto 4</h2><pre class="codeinput"><span class="comment">% M1.1 inline functions</span>
+
+f=@(t) exp(-t).*cos(2*pi*t)
+t=0;
+f(t)
+f(0)
+t=-2:2;
+f(t)
+Grafica(t, f(t), <span class="string">'Execise M1.1 G1'</span>, [-3 3], [-6 8], <span class="string">'t'</span>);
+t=-2:0.001:2;
+Grafica(t, f(t), <span class="string">'Execise M1.1 G2'</span>, [-3 3], [-6 8], <span class="string">'t'</span>);
+
+<span class="comment">% M1.2 Relational Operators and Unit Step Function</span>
+
+u = @(t) t&gt;=0
+t = -2:2;
+Grafica(t, u(t), <span class="string">'Excercise M1.2 G1'</span>, [-3 3], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'u(t)'</span>);
+t=-2:0.001:2;
+Grafica(t, u(t), <span class="string">'Excercise M1.2 G2'</span>, [-3 3], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'u(t)'</span>);
+p=@(t) (t&gt;=0 &amp; t&lt;1);
+t=-1:0.01:2;
+Grafica(t, p(t), <span class="string">'Excercise M1.2 G3'</span>, [-3 3], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'p(t) = u(t)-u(t-1)'</span>);
+
+<span class="comment">% M1.3 Visualizing Operations on the Independent Variable</span>
+
+g=@(t) exp(-t).*cos(2*pi*t).*(t&gt;=0)
+t=-2:0.01:2;
+Grafica(t, g(2*t+1), <span class="string">'Excercise M1.3 G1'</span>, [-3 3], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'g(2t+1)'</span>);
+Grafica(t, g(-t+1), <span class="string">'Excercise M1.3 G2'</span>, [-3 3], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'g(-t+1)'</span>);
+Grafica(t, g(2*t+1)+g(-t+1), <span class="string">'Excercise M1.3 G3'</span>, [-3 3], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'h(t) = g(2t+1) + g(-t+1)'</span>);
+
+<span class="comment">% M1.4 Numerical Integration and Estimating Signal Energy</span>
+
+x = @(t) exp(-t).*(t&gt;=0 &amp; t&lt;1);
+t=0:0.01:1;
+E_x = sum(x(t).*x(t)*0.01)
+x_square=@(t) exp(-2*t).*(t&gt;=0 &amp; t&lt;1);
+E_x = integral(x_square, 0, 1)
+g_squared = @(t) exp(-2*t).*(cos(2*pi*t).^2).*(t&gt;=0);
+t = 0:0.001:100;
+E_g = sum(g_squared(t)*0.001)
+E_g = integral(g_squared, 0, 100)
+</pre><pre class="codeoutput">
+f =
+
+  function_handle with value:
+
+    @(t)exp(-t).*cos(2*pi*t)
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+    7.3891    2.7183    1.0000    0.3679    0.1353
+
+
+u =
+
+  function_handle with value:
+
+    @(t)t&gt;=0
+
+
+g =
+
+  function_handle with value:
+
+    @(t)exp(-t).*cos(2*pi*t).*(t&gt;=0)
+
+
+E_x =
+
+    0.4367
+
+
+E_x =
+
+    0.4323
+
+
+E_g =
+
+    0.2567
+
+
+E_g =
+
+    0.2562
+
+</pre><img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_03.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_04.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_05.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_06.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_07.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_08.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_09.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_10.png" alt=""> <h2 id="5">Punto 5</h2><p>For the signal <img src="ASySPrac2MarcoRodriguez_eq14833433867325483769.png" alt="$x(t)$"> illustrated, sketch a) <img src="ASySPrac2MarcoRodriguez_eq12657945112240979270.png" alt="$x(t-4)$"> b) <img src="ASySPrac2MarcoRodriguez_eq17012574930567585137.png" alt="$x(t/1.5)$"> c) <img src="ASySPrac2MarcoRodriguez_eq09897293323470263254.png" alt="$x(-t)$"> d) <img src="ASySPrac2MarcoRodriguez_eq03542025780904024759.png" alt="$x(2t-4)$"> e) <img src="ASySPrac2MarcoRodriguez_eq06543333246515609381.png" alt="$x(2-t)$"></p><pre class="codeinput">x=@(t) abs(t./2).*(heaviside(t+4)-heaviside(t-2));
+t = -10:0.001:10;
+Grafica(t, x(t), <span class="string">'Problem 1.2.2'</span>, [-5 3], [-5 5], <span class="string">'t'</span>)
+ylabel(<span class="string">'x(t)'</span>);
+Grafica(t, x(t-4), <span class="string">'Problem 1.2.2'</span>, [-5 7], [-5 5], <span class="string">'t'</span>)
+ylabel(<span class="string">'x(t-4)'</span>);
+Grafica(t, x(t/1.5), <span class="string">'Problem 1.2.2'</span>, [-10 5], [-5 5], <span class="string">'t'</span>)
+ylabel(<span class="string">'x(t/1.5)'</span>);
+Grafica(t, x(-t), <span class="string">'Problem 1.2.2'</span>, [-4 6], [-5 5], <span class="string">'t'</span>)
+ylabel(<span class="string">'x(-t)'</span>);
+Grafica(t, x(2*t-4), <span class="string">'Problem 1.2.2'</span>, [-5 6], [-5 5], <span class="string">'t'</span>)
+ylabel(<span class="string">'x(2t-4)'</span>);
+Grafica(t, x(2-t), <span class="string">'Problem 1.2.2'</span>, [-2 8], [-5 5], <span class="string">'t'</span>)
+ylabel(<span class="string">'x(2-t)'</span>);
+</pre><img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_11.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_12.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_13.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_14.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_15.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_16.png" alt=""> <h2 id="6">Punto 6</h2><p>Funcion para calcular energia:</p><pre class="language-matlab">
+<span class="keyword">function</span> [E] = Energia(f, t)
+
+E = integral(f, min(t), max(t));
+
+<span class="keyword">end</span>
+
+
+</pre><pre class="codeinput"><span class="comment">%</span>
+<span class="comment">% Find the energies of the pair of signals $x(t)$ and $y(t)$</span>
+<span class="comment">%</span>
+<span class="comment">% a)</span>
+x=@(t) square(t).*(t&gt;=0 &amp; t&lt;=2);
+y=@(t) square(-t+1).*(t&gt;=0 &amp; t&lt;=2);
+t=-2:0.001:4;
+Grafica(t, x(t), <span class="string">'Problem 1.1.3'</span>, [-1 3], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'x(t)'</span>);
+Grafica(t, y(t), <span class="string">'Problem 1.1.3'</span>, [-1 3], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'y(t)'</span>);
+E_x1=Energia(x, t)
+E_y1=Energia(y, t)
+<span class="comment">%</span>
+<span class="comment">% b)</span>
+x=@(t) sin(t).*(t&gt;=0 &amp; t&lt;=2*pi);
+y=@(t) heaviside(t).*(t&gt;=0 &amp; t&lt;=2*pi);
+t=-2:0.001:4*pi;
+Grafica(t, x(t), <span class="string">'Problem 1.1.3'</span>, [-1 3*pi], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'x(t)'</span>);
+Grafica(t, y(t), <span class="string">'Problem 1.1.3'</span>, [-1 3*pi], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'y(t)'</span>);
+E_x2=Energia(x, t)
+E_y2=Energia(y, t)
+<span class="comment">%</span>
+<span class="comment">% c)</span>
+x=@(t) sin(t).*(t&gt;=0 &amp; t&lt;=pi);
+y=@(t) heaviside(t).*(t&gt;=0 &amp; t&lt;=pi);
+t=-2:0.001:4*pi;
+Grafica(t, x(t), <span class="string">'Problem 1.1.3'</span>, [-1 2*pi], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'x(t)'</span>);
+Grafica(t, y(t), <span class="string">'Problem 1.1.3'</span>, [-1 2*pi], [-2 2], <span class="string">'t'</span>)
+ylabel(<span class="string">'y(t)'</span>);
+E_x3=Energia(x, t)
+E_y3=Energia(y, t)
+</pre><pre class="codeoutput">
+E_x1 =
+
+    2.0000
+
+
+E_y1 =
+
+   2.2964e-16
+
+
+E_x2 =
+
+  -3.0005e-12
+
+
+E_y2 =
+
+    6.2832
+
+
+E_x3 =
+
+    2.0000
+
+
+E_y3 =
+
+    3.1416
+
+</pre><img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_17.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_18.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_19.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_20.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_21.png" alt=""> <img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_22.png" alt=""> <h2 id="7">Punto 7</h2><p>Funcion para calcular potencia:</p><pre class="language-matlab">
+<span class="keyword">function</span> [P] = Potencia(f, T)
+F=@(t) f(t).^2;
+P=integral(F, -T/2, T/2)/(T);
+<span class="keyword">end</span>
+
+
+</pre><pre class="codeinput"><span class="comment">%</span>
+T=4;
+t=-T/2:0.001:T/2;
+f=@(t) t.^3;
+Grafica(t, f(t), <span class="string">'Problem 1.1.4'</span>, [-6 6], [-10 10], <span class="string">'t'</span>)
+P_0 = Potencia(f, T)
+a=@(t) -f(t);
+P_a = Potencia(a, T)
+b=@(t) 2*f(t);
+P_b = Potencia(b, T)
+</pre><pre class="codeoutput">
+P_0 =
+
+    9.1429
+
+
+P_a =
+
+    9.1429
+
+
+P_b =
+
+   36.5714
+
+</pre><img vspace="5" hspace="5" src="ASySPrac2MarcoRodriguez_23.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Practica 2: Señales Continuass
+%% Punto 1
+%
+% Funcion que evalua  $F(w)=\frac{a}{a^{2}+w^{2}}$ 
+%
+% <include>fun1.m</include>
+
+%% Punto 2
+%
+
+w=-2:0.001:2;
+f=fun1(1, w);
+Grafica(w, f, 'Grafica de F(w)', [-3 3], [-2 2], 'w')
+ 
+%
+%% Punto 3
+%
+% La transformada de Fourier de $f(t)=e^{-2t}u(t)$ es $F(w)=\frac{1}{2+wj}$
+% La parte real es : $\frac{\sqrt{29}}{29}Cos(tg^{-1}(\frac{w}{2}))$
+% La parte imaginaria es : $\frac{\sqrt{29}}{29}Sen(tg^{-1}(\frac{w}{2}))$
+
+w=-10:0.001:10;
+Re_F=@(w) (sqrt(29)/29)*cos(atand(w/2));
+Im_F=@(w) (sqrt(29)/29)*sin(atand(w/2));
+Grafica3D(w, Re_F(w), Im_F(w), 'Grafica de la transformada de Fourier')
+
+% 
+
+%% Punto 4
+%
+
+% M1.1 inline functions
+
+f=@(t) exp(-t).*cos(2*pi*t)
+t=0;
+f(t)
+f(0)
+t=-2:2;
+f(t)
+Grafica(t, f(t), 'Execise M1.1 G1', [-3 3], [-6 8], 't');
+t=-2:0.001:2;
+Grafica(t, f(t), 'Execise M1.1 G2', [-3 3], [-6 8], 't');
+
+% M1.2 Relational Operators and Unit Step Function
+
+u = @(t) t>=0
+t = -2:2;
+Grafica(t, u(t), 'Excercise M1.2 G1', [-3 3], [-2 2], 't')
+ylabel('u(t)');
+t=-2:0.001:2;
+Grafica(t, u(t), 'Excercise M1.2 G2', [-3 3], [-2 2], 't')
+ylabel('u(t)');
+p=@(t) (t>=0 & t<1);
+t=-1:0.01:2;
+Grafica(t, p(t), 'Excercise M1.2 G3', [-3 3], [-2 2], 't')
+ylabel('p(t) = u(t)-u(t-1)');
+
+% M1.3 Visualizing Operations on the Independent Variable
+
+g=@(t) exp(-t).*cos(2*pi*t).*(t>=0)
+t=-2:0.01:2;
+Grafica(t, g(2*t+1), 'Excercise M1.3 G1', [-3 3], [-2 2], 't')
+ylabel('g(2t+1)');
+Grafica(t, g(-t+1), 'Excercise M1.3 G2', [-3 3], [-2 2], 't')
+ylabel('g(-t+1)');
+Grafica(t, g(2*t+1)+g(-t+1), 'Excercise M1.3 G3', [-3 3], [-2 2], 't')
+ylabel('h(t) = g(2t+1) + g(-t+1)');
+
+% M1.4 Numerical Integration and Estimating Signal Energy
+
+x = @(t) exp(-t).*(t>=0 & t<1);
+t=0:0.01:1;
+E_x = sum(x(t).*x(t)*0.01)
+x_square=@(t) exp(-2*t).*(t>=0 & t<1);
+E_x = integral(x_square, 0, 1)
+g_squared = @(t) exp(-2*t).*(cos(2*pi*t).^2).*(t>=0);
+t = 0:0.001:100;
+E_g = sum(g_squared(t)*0.001)
+E_g = integral(g_squared, 0, 100)
+
+%% Punto 5
+%
+% For the signal $x(t)$ illustrated, sketch
+% a) $x(t-4)$
+% b) $x(t/1.5)$
+% c) $x(-t)$
+% d) $x(2t-4)$
+% e) $x(2-t)$
+%
+x=@(t) abs(t./2).*(heaviside(t+4)-heaviside(t-2));
+t = -10:0.001:10;
+Grafica(t, x(t), 'Problem 1.2.2', [-5 3], [-5 5], 't')
+ylabel('x(t)');
+Grafica(t, x(t-4), 'Problem 1.2.2', [-5 7], [-5 5], 't')
+ylabel('x(t-4)');
+Grafica(t, x(t/1.5), 'Problem 1.2.2', [-10 5], [-5 5], 't')
+ylabel('x(t/1.5)');
+Grafica(t, x(-t), 'Problem 1.2.2', [-4 6], [-5 5], 't')
+ylabel('x(-t)');
+Grafica(t, x(2*t-4), 'Problem 1.2.2', [-5 6], [-5 5], 't')
+ylabel('x(2t-4)');
+Grafica(t, x(2-t), 'Problem 1.2.2', [-2 8], [-5 5], 't')
+ylabel('x(2-t)');
+
+%% Punto 6
+% 
+% Funcion para calcular energia:
+%
+% <include>Energia.m</include>
+
+%
+% Find the energies of the pair of signals $x(t)$ and $y(t)$
+%
+% a) 
+x=@(t) square(t).*(t>=0 & t<=2);
+y=@(t) square(-t+1).*(t>=0 & t<=2);
+t=-2:0.001:4;
+Grafica(t, x(t), 'Problem 1.1.3', [-1 3], [-2 2], 't')
+ylabel('x(t)');
+Grafica(t, y(t), 'Problem 1.1.3', [-1 3], [-2 2], 't')
+ylabel('y(t)');
+E_x1=Energia(x, t)
+E_y1=Energia(y, t)
+%
+% b) 
+x=@(t) sin(t).*(t>=0 & t<=2*pi);
+y=@(t) heaviside(t).*(t>=0 & t<=2*pi);
+t=-2:0.001:4*pi;
+Grafica(t, x(t), 'Problem 1.1.3', [-1 3*pi], [-2 2], 't')
+ylabel('x(t)');
+Grafica(t, y(t), 'Problem 1.1.3', [-1 3*pi], [-2 2], 't')
+ylabel('y(t)');
+E_x2=Energia(x, t)
+E_y2=Energia(y, t)
+%
+% c) 
+x=@(t) sin(t).*(t>=0 & t<=pi);
+y=@(t) heaviside(t).*(t>=0 & t<=pi);
+t=-2:0.001:4*pi;
+Grafica(t, x(t), 'Problem 1.1.3', [-1 2*pi], [-2 2], 't')
+ylabel('x(t)');
+Grafica(t, y(t), 'Problem 1.1.3', [-1 2*pi], [-2 2], 't')
+ylabel('y(t)');
+E_x3=Energia(x, t)
+E_y3=Energia(y, t)
+
+%% Punto 7
+%
+% Funcion para calcular potencia:
+%
+% <include>Potencia.m</include>
+%
+
+%
+T=4;
+t=-T/2:0.001:T/2;
+f=@(t) t.^3;
+Grafica(t, f(t), 'Problem 1.1.4', [-6 6], [-10 10], 't')
+P_0 = Potencia(f, T)
+a=@(t) -f(t);
+P_a = Potencia(a, T)
+b=@(t) 2*f(t);
+P_b = Potencia(b, T)
+
+
+
+
+
+
+
+
+##### SOURCE END #####
+--></body></html>
